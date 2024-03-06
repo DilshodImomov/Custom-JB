@@ -171,15 +171,15 @@ app.post('/execute', function(req, res) {
     }
 
     // example: https://developer.salesforce.com/docs/atlas.en-us.noversion.mc-app-development.meta/mc-app-development/example-rest-activity.htm
-    const discountInArgument = getInArgument('discount') || 'nothing';
-    const responseObject = {
-        discount: discountInArgument,
-        discountCode: generateRandomCode() + `-${discountInArgument}%`
-    };
+    // const discountInArgument = getInArgument('discount') || 'nothing';
+    // const responseObject = {
+    //     discount: discountInArgument,
+    //     discountCode: generateRandomCode() + `-${discountInArgument}%`
+    // };
 
-    console.log('Response Object', JSON.stringify(responseObject));
+    // console.log('Response Object', JSON.stringify(responseObject));
 
-    return res.status(200).json(responseObject);
+    return res.status(200).json(request);
 });
 
 app.listen(app.get('port'), function() {
