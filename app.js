@@ -36,13 +36,16 @@ app.set('port', (process.env.PORT || 8080));;
 app.get('/', function(req, res) {
     return res.redirect('index.html');
 });
-
-// setup index.html route
-app.get('/index.html', function(req, res) {
-    // you can use your favorite templating library to generate your html file.
-    // this example keeps things simple and just returns a static file
-    return res.sendFile(path.join(__dirname, '/public/index.html'));
+app.get('/postmonger.js', function(req, res) {
+    return res.redirect('/js/postmonger.js');
 });
+
+// // setup index.html route
+// app.get('/index.html', function(req, res) {
+//     // you can use your favorite templating library to generate your html file.
+//     // this example keeps things simple and just returns a static file
+//     return res.sendFile(path.join(__dirname, '/public/index.html'));
+// });
 
 // setup config.json route
 app.get('/config.json', function(req, res) {
