@@ -18,6 +18,7 @@ const configJSON = require('./config-json');
 
 const app = express();
 
+
 app.use(bodyParser.json());
 
 app.use(express.static('public'));
@@ -48,7 +49,7 @@ app.get('/config.json', function(req, res) {
     // Journey Builder looks for config.json when the canvas loads.
     // We'll dynamically generate the config object with a function
     console.log("here");
-    return res.status(200).json(configJSON(req));
+    return res.status(200).json(configJSON.configJSON(req));
 });
 
 // ```````````````````````````````````````````````````````
