@@ -1,7 +1,7 @@
 {
   "workflowApiVersion": "1.1",
   "metaData": {
-    "icon": "images/sms.png",
+    "icon": "images/icon.png",
     "category": "message"
   },
   "type": "REST",
@@ -26,21 +26,21 @@
           "foundSignupDate": ""
         }
       ],
-      "url": "https://some-endpoint.com/execute"
+      "url": "https:/custom-jb.onrender.com/execute"
     }
   },
   "configurationArguments": {
     "save": {
-      "url": "URI/for/your/activity/save"
+      "url": "https:/custom-jb.onrender.com/save"
     },
     "publish": {
-      "url": "URI/for/your/activity/publish"
+      "url": "https:/custom-jb.onrender.com/publish"
     },
     "validate": {
-      "url": "URI/for/your/activity/validate"
+      "url": "https:/custom-jb.onrender.com/validate"
     },
     "stop": {
-      "url": "URI/for/your/activity/stop"
+      "url": "https:/custom-jb.onrender.com/stop"
     }
   },
   "wizardSteps": [
