@@ -48,12 +48,12 @@ app.get('/postmonger.js', function(req, res) {
 // });
 
 // setup config.json route
-app.get('/config.json', function(req, res) {
-    // Journey Builder looks for config.json when the canvas loads.
-    // We'll dynamically generate the config object with a function
-    console.log("here");
-    return res.status(200).json(configJSON.configJSON(req));
-});
+// app.get('/config.json', function(req, res) {
+//     // Journey Builder looks for config.json when the canvas loads.
+//     // We'll dynamically generate the config object with a function
+//     console.log("here");
+//     return res.status(200).json(configJSON.configJSON(req));
+// });
 
 // ```````````````````````````````````````````````````````
 // BEGIN JOURNEY BUILDER LIFECYCLE EVENTS
