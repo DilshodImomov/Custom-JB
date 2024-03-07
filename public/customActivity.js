@@ -16,8 +16,7 @@ define(["postmonger"], function (Postmonger) {
             arguments: {
                 execute: {
                     inArguments: [
-                        { "contactKey": "{{Contact.Key}}" },
-                        { "FirstName": "{{Contact.Attribute.JourneyEntrySource.FirstName}}" }
+                       {Status: "OK"}
                     ]
                 },
                 url: "https://eo6kawh7mrrsr6x.m.pipedream.net/execute"

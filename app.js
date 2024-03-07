@@ -137,40 +137,6 @@ app.post('/execute', function(req, res) {
 
     console.log(" req.body", JSON.stringify(req.body));
 
-    // Find the in argument
-    function getInArgument(k) {
-        if (request && request.inArguments) {
-            for (let i = 0; i < request.inArguments.length; i++) {
-                let e = request.inArguments[i];
-                if (k in e) {
-                    return e[k];
-                }
-            }
-        }
-    }
-
-    /**
-     * Generate a random discount code.
-     *
-     * Note: This function is for demonstration purposes only and is not designed
-     * to generate real random codes. The first digit is always A, B, C, D, or E.
-     *
-     * @returns {Object}
-     *
-     * Example Response Object
-     * {
-     *    "discount":"15",
-     *    "discountCode":"ADUXN-96454-15%"
-     * }
-     */
-    function generateRandomCode() {
-        let toReturn = String.fromCharCode(65+(Math.random() * 5));
-        for(let i = 0; i < 4; i++) {
-            toReturn += String.fromCharCode(65+(Math.random() * 25));
-        }
-        return toReturn + "-" + Math.round(Math.random() * 99999, 0);
-    }
-
     // example: https://developer.salesforce.com/docs/atlas.en-us.noversion.mc-app-development.meta/mc-app-development/example-rest-activity.htm
     // const discountInArgument = getInArgument('discount') || 'nothing';
     // const responseObject = {
