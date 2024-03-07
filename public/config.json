@@ -44,10 +44,8 @@
     }
   },
   "userInterfaces": {
-    "configurationSupportsReadOnlyMode" : true,
     "configInspector": {
-      "size": "scm-lg",
-      "emptyIframe": true
+      "size": "medium"
     }
   },
   "schema": {
