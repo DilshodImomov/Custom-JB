@@ -16,10 +16,17 @@ define(["postmonger"], function (Postmonger) {
             arguments: {
                 execute: {
                     inArguments: [
-                       {Status: "OK"}
+                        { "contactKey": "{{Contact.Key}}" },
+                        { "Status": "OK" }
+                        // { "FirstName": "{{Contact.Attribute.JourneyEntrySource.firstname}}" }
                     ]
                 },
                 url: "https://eo6kawh7mrrsr6x.m.pipedream.net/execute"
+            },
+            configurationArguments: {
+                publish: {
+                    url: "https://eo6kawh7mrrsr6x.m.pipedream.net/publish"
+                }
             }
         };
         connection.trigger('updateActivity', configuration);
