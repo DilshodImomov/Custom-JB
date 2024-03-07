@@ -133,9 +133,9 @@ app.post('/stop', function(req, res) {
 app.post('/execute', function(req, res) {
     console.log('debug: /execute');
 
-    const request = req.body;
+    const request = req;
 
-    console.log(" req.body", JSON.stringify(req.body));
+    console.log(" req.body", JSON.stringify(request));
 
     // example: https://developer.salesforce.com/docs/atlas.en-us.noversion.mc-app-development.meta/mc-app-development/example-rest-activity.htm
     // const discountInArgument = getInArgument('discount') || 'nothing';
