@@ -73,7 +73,8 @@ app.get('/postmonger.js', function(req, res) {
  */
 app.post('/save', function(req, res) {
     console.log('debug: /save');
-    return res.status(200).json({});
+    return res.send(200, 'Save');
+    // return res.status(200).json({});
 });
 
 /**
