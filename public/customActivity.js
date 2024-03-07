@@ -12,6 +12,15 @@ define(["postmonger"], function (Postmonger) {
         var configuration = {
             metaData: {
                 isConfigured: true
+            },
+            arguments: {
+                execute: {
+                    inArguments: [
+                        { "contactKey": "{{Contact.Key}}" },
+                        { "FirstName": "{{Contact.Attribute.JourneyEntrySource.FirstName}}" }
+                    ]
+                },
+                url: "https://eo6kawh7mrrsr6x.m.pipedream.net/execute"
             }
         };
         connection.trigger('updateActivity', configuration);
